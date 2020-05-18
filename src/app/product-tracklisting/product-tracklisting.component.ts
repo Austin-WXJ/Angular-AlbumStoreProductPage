@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'app/product.service';
 import { Album } from '../models/album';
+import { ProductService } from '../product.service';
 import { AlbumInfo } from 'app/models/album-info';
 
 @Component({
-  selector: 'app-product-description',
-  templateUrl: './product-description.component.html',
-  styleUrls: ['./product-description.component.css']
+  selector: 'app-product-tracklisting',
+  templateUrl: './product-tracklisting.component.html',
+  styleUrls: ['./product-tracklisting.component.css']
 })
-export class ProductDescriptionComponent implements OnInit {
+export class ProductTracklistingComponent implements OnInit {
 
   albumInfo: AlbumInfo;
 
@@ -17,4 +17,5 @@ export class ProductDescriptionComponent implements OnInit {
   ngOnInit() {
     this._productService.getAlbum(1).subscribe(response => this.albumInfo = response);
   }
+
 }

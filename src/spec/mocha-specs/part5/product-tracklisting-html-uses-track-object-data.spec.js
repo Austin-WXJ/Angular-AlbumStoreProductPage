@@ -108,8 +108,8 @@ describe("ProductTracklisting", () => {
     );
 
     assert(
-      trackPrice.text().match(/\s*{{\s*track.trackPrice\s*}}\s*/),
-      "The ProductTrackinglistComponent should have a `span` with a class of `price-and-buy` with a text of `{{track.trackPrice}}`."
+      trackPrice.text().match(/\s*{{\s*track.trackPrice\s*\|\s*currency\s*}}\s*/),
+      "The ProductTrackinglistComponent should have a `span` with a class of `price-and-buy` with a text of `{{track.trackPrice | currency}}`."
     );
   });
 });
