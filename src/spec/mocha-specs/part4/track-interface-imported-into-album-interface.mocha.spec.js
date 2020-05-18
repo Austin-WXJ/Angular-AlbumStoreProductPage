@@ -6,7 +6,7 @@ describe('Album Interface', function() {
   it(`should import the Track Interface @track-interface-imported-into-album-interface`, function () {
     let file
     try {
-      file = fs.readFileSync(__dirname + '/../../../app/album.ts').toString();
+      file = fs.readFileSync(__dirname + '/../../../app/models/album.ts').toString();
     } catch (e) {
       assert(false, "The Album interface doesn't exist yet.");
     }

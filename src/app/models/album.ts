@@ -2,7 +2,7 @@ import { Track } from './track';
 
 export interface Album {
   name: string;
-  resleaseDate: string;
+  releaseDate: string;
   coverImage: string;
   tracks: Track[];
 }
