@@ -4,11 +4,11 @@ let assert = require('chai').assert
 
 describe('Product Interface', function() {
   it(`should exist @product-interface-exists`, function () {
-    assert(fs.existsSync(__dirname + '/../../../app/product.ts'), "The Product interface hasn't been created yet.");
-    
+    assert(fs.existsSync(__dirname + '/../../../app/models/product.ts'), "The Product interface hasn't been created yet.");
+
     let file;
     try {
-      file = fs.readFileSync(__dirname + '/../../../app/product.ts').toString();
+      file = fs.readFileSync(__dirname + '/../../../app/models/product.ts').toString();
     } catch (e) {
       assert(false, "The Product interface hasn't been created yet.")
     }

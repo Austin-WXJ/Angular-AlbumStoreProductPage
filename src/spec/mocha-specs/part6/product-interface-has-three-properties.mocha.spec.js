@@ -6,20 +6,20 @@ describe('Product Interface', function () {
   it(`should have an id property of type number @product-interface-has-three-properties`, function () {
     let file
     try {
-      file = fs.readFileSync(__dirname + '/../../../app/product.ts').toString();
+      file = fs.readFileSync(__dirname + '/../../../app/models/product.ts').toString();
     } catch (e) {
       assert(false, "The Product interface doesn't exist yet.")
     }
     let re = /export\s+interface\s+Product\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
     let match = file.match(re);
     assert(Array.isArray(match) && match != null, "There's a `product.ts` file, but it doesn't export an interface named `Product`.");
-    
+
     let arr = match[1].split('\n');
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
 
-    let properties = [];    
+    let properties = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].trim().length > 0) {
         let obj = {};
@@ -28,7 +28,7 @@ describe('Product Interface', function () {
         properties[i] = obj;
       }
     }
-    
+
     let idKeyFound = false
       , idValueFound = false
     for (let i = 0; i < properties.length; i++) {
@@ -46,20 +46,20 @@ describe('Product Interface', function () {
   it(`should have an artistName property of type string @product-interface-has-three-properties`, function () {
     let file
     try {
-      file = fs.readFileSync(__dirname + '/../../../app/product.ts').toString();
+      file = fs.readFileSync(__dirname + '/../../../app/models/product.ts').toString();
     } catch (e) {
       assert(false, "The Product interface doesn't exist yet.")
     }
     let re = /export\s+interface\s+Product\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
     let match = file.match(re);
     assert(Array.isArray(match) && match != null, "There's a `product.ts` file, but it doesn't export an interface named `Product`.");
-    
+
     let arr = match[1].split('\n');
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
 
-    let properties = [];    
+    let properties = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].trim().length > 0) {
         let obj = {};
@@ -68,7 +68,7 @@ describe('Product Interface', function () {
         properties[i] = obj;
       }
     }
-    
+
     let artistNameKeyFound = false
       , artistNameValueFound = false
     for (let i = 0; i < properties.length; i++) {
@@ -86,20 +86,20 @@ describe('Product Interface', function () {
   it(`should have an albumName property of type string @product-interface-has-three-properties`, function () {
     let file
     try {
-      file = fs.readFileSync(__dirname + '/../../../app/product.ts').toString();
+      file = fs.readFileSync(__dirname + '/../../../app/models/product.ts').toString();
     } catch (e) {
       assert(false, "The Product interface doesn't exist yet.")
     }
     let re = /export\s+interface\s+Product\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
     let match = file.match(re);
     assert(Array.isArray(match) && match != null, "There's a `product.ts` file, but it doesn't export an interface named `Product`.");
-    
+
     let arr = match[1].split('\n');
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
 
-    let properties = [];    
+    let properties = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].trim().length > 0) {
         let obj = {};
@@ -108,7 +108,7 @@ describe('Product Interface', function () {
         properties[i] = obj;
       }
     }
-    
+
     let albumNameKeyFound = false
       , albumNameValueFound = false
     for (let i = 0; i < properties.length; i++) {
